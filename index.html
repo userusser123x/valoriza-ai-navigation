@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Valoriza App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Pantalla de introducción -->
+  <!-- Pantalla de introducción -->
+<div id="intro-screen">
+  <div class="blur-bg"></div>
+  <img src="circular.png" alt="Logo rotatorio" class="intro-logo" />
+</div>
+
+
+  <header>
+    <div class="logo">
+      <img src="logo.png" alt="Valoriza" />
+    </div>
+    <nav>
+      <a href="#inicio" class="nav-btn">Inicio</a>
+      <a href="#mapa" class="nav-btn">Mapa</a>
+      <a href="#donde" class="nav-btn">¿Dónde tiro?</a>
+
+    </nav>
+  </header>
+
+  <main>
+    <div class="background-blur"></div>
+    <div class="content">
+      <section id="inicio" style="text-align: center; padding: 3rem;">
+        <div class="text-container">
+          <h2>Bienvenido</h2>
+          <p>Accede al mapa en tiempo real desde la pestaña superior o escanee un objeto que desee tirar. Este es un prototipo funcional para móvil.</p>
+        </div>
+      </section>
+
+      <section id="mapa">
+        <h2>Mapa en Tiempo Real</h2>
+        <div id="map"></div>
+        <div id="ruta-btn-container">
+  <button id="ruta-btn">Ruta más cercana</button>
+</div>
+
+      </section>
+
+      <section id="donde" style="text-align: center; padding: 3rem;">
+<h2 style="color: #287c39;">¿Dónde tiro?</h2>
+  <p></p>
+  <p>Enfoque el objeto para realizar el escaneo</p>
+  <div id="contenedor-interactivo">
+    <div id="rectangulo-negro"></div>
+    <img id="gif-contenedor" src="g.gif" alt="Gif contenedor" style="display:none;" />
+  </div>
+  <div id="popup-contenedor">
+  <div class="popup-box">
+   
+    <p><strong style="color: #287c39;">¿Dónde tiro GAFAS DE SOL?</strong></p>
+    <h3>Contenedor Gris</h3>
+    <p style="margin-top: 1rem;">
+      Aunque lleven cristal y plástico, las gafas de sol no van al verde ni al amarillo.
+      ¡Son como esos amigos que no encajan en ningún grupo! 😅<br><br>
+      Como sus materiales son difíciles de separar, acaban en el gris. Pero si aún sirven,
+      ¡dónalas y dales segunda vida! 🌍✨
+    </p>
+  </div>
+</div>
+
+</section>
+
+
+
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 Valoriza (prototipo visual)
+  </footer>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+
+  <script>
+    window.addEventListener('load', () => {
+      const intro = document.getElementById('intro-screen');
+      setTimeout(() => {
+        intro.classList.add('hidden');
+      }, 5000);
+    });
+  </script>
+
+</body>
+</html>
